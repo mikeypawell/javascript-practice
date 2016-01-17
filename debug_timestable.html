@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Debug: Time Tables</title>
+
+	<script type="text/javascript">
+		function writeTimeTable(timesTable) 
+		{
+			var counter;
+			var writeString;
+			for (counter = 1; counter < 12; counter ++)
+			{
+				writeString = counter + " * " + timesTable + " = ";
+				writeString = writeString + (timesTable * counter);
+				writeString = writeString + "<br />";
+				document.write(writeString);
+
+			}
+		}	
+
+		
+
+	</script>
+</head>
+<body>
+	<script type = "text/javascript">
+		writeTimesTable(2);
+	</script> 
+
+
+
+</body>
+</html>
