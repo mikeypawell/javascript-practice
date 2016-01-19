@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<h2>Summary of Bookings</h2>
+
+<script type="text/javascript">
+	function CustomerBooking(bookingId, customerName, film, showDate)
+		{
+			this.customerName = customerName;
+			this.bookingId = bookingId;
+			this.showDate = showDate;
+			this.film = film;
+		}
+
+		CustomerBooking.prototype.getCustomerName = function()
+			{
+				return this.customerName;
+			};
+		CustomerBooking.prototype.setCustomerName = function(customerName)
+			{
+				 this.customerName = customerName;
+			};
+		CustomerBooking.prototype.getShowDate = function()
+			{
+				return this.showDate;
+			};
+		CustomerBooking.prototype.setShowDate = function(showDate)
+			{
+				this.showDate = showDate;
+			};
+		CustomerBooking.prototype.getFilm = function()
+			{
+				return this.film;
+			};
+		CustomerBooking.prototype.setFilm = function()
+			{
+				this.film = film;
+			};
+		CustomerBooking.prototype.getBookingId = function()
+			{
+				return this.bookingId;
+			};
+		CustomerBooking.prototype.setBookingId = function()
+			{
+				this.bookingId = bookingId;
+			};
+
+		function Cinema()
+		{
+			this.bookings = new Array();
+		}
+
+		Cinema.prototype.addBooking = function(bookingId, customerName, film, showDate)
+			{
+				this.bookings[bookingId] = new CustomerBooking(bookingId, customerName, film, showDate);
+			};
+
+		//I did't make the HTML table 
+
+		var londonOdeon = new Cinema();
+		londonOdeon.addBooking(342, "Arnold Palmer", "Toy Story", "15 July 2009 20:15");
+
+		document.write(londonOdeon);
+
+</script>
+	
+</body>
+</html>
