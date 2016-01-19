@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+	var numbers = new Array(1,2,3,4,5);
+
+	function isLessThan3(value,index, array)
+	{
+		var returnValue = false;
+		if (value < 3)
+			{
+				returnValue = true;
+			}	
+		return returnValue;
+	}
+	alert(numbers.every(isLesThan3));
+</script>
+	
+</body>
+</html>
